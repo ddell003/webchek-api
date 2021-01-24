@@ -20,40 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a153f4d-0af7-44e7-9659-3eaab29e5df3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Exceptions/AccountNotSetException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Api/AccountController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Api/AppController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Api/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Api/TestController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Api/TestLogController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AccountRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AppRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/CreateUserRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/LogInRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/TestLogRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/TestRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Account.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/AccountScope.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/AccountTenantObserver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/App.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/HasAccountScope.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Test.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/TestLog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/TestUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/AccountRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/AppRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/TestLogRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/TestRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/TestService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Api/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Api/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisteredUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repository/EloquentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/EloquentRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/UserService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +180,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611438430919</updated>
       <workItem from="1611438431990" duration="310000" />
-      <workItem from="1611438767082" duration="16635000" />
+      <workItem from="1611438767082" duration="17297000" />
     </task>
     <servers />
   </component>

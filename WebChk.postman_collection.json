@@ -1,0 +1,527 @@
+{
+	"info": {
+		"_postman_id": "c2223ced-6b89-41be-94c5-bdb745f0fbf0",
+		"name": "WebChk",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": " http://127.0.0.1:8001/api/users",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "n6tJBJWhjXkqJuPfe4jT3T06n47r5HbnT8aWlMFxSrvTWvC5q0LDX0TsU5uLT0m4Ipn5EOl5zTacaK3J"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"webchecj\",\n    \"fullname\": \"bob smith\",\n    \"email\":\"bobsmith3.@gmail.com\",\n    \"password\":\"password\",\n    \"account_id\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8001/api/users"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8001/api/accout",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"webchecj\",\n    \"fullname\": \"bob smith\",\n    \"email\":\"bobsmithd.@gmail.com\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8001/api/accounts"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8001/api/users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"webchecj\",\n    \"fullname\": \"bob smith\",\n    \"email\":\"bobsmith.@gmail.com\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8001/api/users"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8001/api/login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "n6tJBJWhjXkqJuPfe4jT3T06n47r5HbnT8aWlMFxSrvTWvC5q0LDX0TsU5uLT0m4Ipn5EOl5zTacaK3J"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"bobsmith.@gmail.com\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8001/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8001/api/apps",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "fLaKDMu94uVy9KplRmUhedZhXUBHi6ieMeWoW4vrpB9jcM376gYntBkYX8xr0zXPvASszLKP3yfBWpvh"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"webchecj\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8001/api/apps"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8001/api/apps",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "fLaKDMu94uVy9KplRmUhedZhXUBHi6ieMeWoW4vrpB9jcM376gYntBkYX8xr0zXPvASszLKP3yfBWpvh"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"webchecj\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8001/api/apps"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8001/api/apps/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "fLaKDMu94uVy9KplRmUhedZhXUBHi6ieMeWoW4vrpB9jcM376gYntBkYX8xr0zXPvASszLKP3yfBWpvh"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"webchecj\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8001/api/apps/1"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8001/api/apps/1",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "fLaKDMu94uVy9KplRmUhedZhXUBHi6ieMeWoW4vrpB9jcM376gYntBkYX8xr0zXPvASszLKP3yfBWpvh"
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"new name\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8001/api/apps/1"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8001/api/apps",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "fLaKDMu94uVy9KplRmUhedZhXUBHi6ieMeWoW4vrpB9jcM376gYntBkYX8xr0zXPvASszLKP3yfBWpvh"
+					}
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"webchecj\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8001/api/apps/5"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8001/api/apps/1/tests",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "fLaKDMu94uVy9KplRmUhedZhXUBHi6ieMeWoW4vrpB9jcM376gYntBkYX8xr0zXPvASszLKP3yfBWpvh"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Test Site 2 Works\",\n    \"app_id\":1,\n    \"url\":\"the url\",\n    \"curl\":null,\n    \"expected_status_code\":200,\n    \"frequency\":\"minutes\",\n    \"frequency_amount\":15\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8001/api/apps/1/tests"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8001/api/apps/1/tests",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "fLaKDMu94uVy9KplRmUhedZhXUBHi6ieMeWoW4vrpB9jcM376gYntBkYX8xr0zXPvASszLKP3yfBWpvh"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Test Site 2 Works\",\n    \"app_id\":1,\n    \"url\":\"the url\",\n    \"curl\":null,\n    \"expected_status_code\":200,\n    \"frequency\":\"minutes\",\n    \"frequency_amount\":15\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8001/api/apps/1/tests"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8001/api/apps/1/tests/1",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "fLaKDMu94uVy9KplRmUhedZhXUBHi6ieMeWoW4vrpB9jcM376gYntBkYX8xr0zXPvASszLKP3yfBWpvh"
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Test Site 2 Works!\",\n    \"app_id\":1,\n    \"url\":\"the url\",\n    \"curl\":null,\n    \"expected_status_code\":200,\n    \"frequency\":\"minutes\",\n    \"frequency_amount\":15,\n    \"users\":[\n        {\"id\":1},\n        {\"id\":2}\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8001/api/apps/1/tests/3"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8001/api/apps/1/tests/1",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "fLaKDMu94uVy9KplRmUhedZhXUBHi6ieMeWoW4vrpB9jcM376gYntBkYX8xr0zXPvASszLKP3yfBWpvh"
+					}
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Test Site 2 Works!\",\n    \"app_id\":1,\n    \"url\":\"the url\",\n    \"curl\":null,\n    \"expected_status_code\":200,\n    \"frequency\":\"minutes\",\n    \"frequency_amount\":15\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8001/api/apps/1/tests/1"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8001/api/apps/1/tests/1/logs",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "fLaKDMu94uVy9KplRmUhedZhXUBHi6ieMeWoW4vrpB9jcM376gYntBkYX8xr0zXPvASszLKP3yfBWpvh"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"test_id\":3,\n    \"status\":2,\n    \"message\":\"passes again\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8001/api/apps/1/tests/2/logs"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8001/api/apps/1/tests/1/logs/4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "fLaKDMu94uVy9KplRmUhedZhXUBHi6ieMeWoW4vrpB9jcM376gYntBkYX8xr0zXPvASszLKP3yfBWpvh"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"test_id\":3,\n    \"status\":2,\n    \"message\":\"passes again\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8001/api/apps/1/tests/3/logs/4"
+			},
+			"response": []
+		}
+	]
+}
