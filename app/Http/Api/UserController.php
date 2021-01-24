@@ -5,6 +5,7 @@ namespace App\Http\Api;
 
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateUserRequest;
 use App\Services\UserService;
 
 class UserController extends Controller
@@ -19,5 +20,10 @@ class UserController extends Controller
     public function index()
     {
         return $this->userService->get();
+    }
+
+    public function store(CreateUserRequest $request)
+    {
+        return $this->userService->create($request->all());
     }
 }

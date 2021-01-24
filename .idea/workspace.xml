@@ -20,24 +20,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a153f4d-0af7-44e7-9659-3eaab29e5df3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Api/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/DefaultResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/Architect.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/EloquentBuilderTrait.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/EloquentRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/LaravelController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/Repository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/UserRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/Utility.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/UserService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Exceptions/AccountNotSetException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Api/AccountController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Api/AppController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Api/LoginController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Api/TestController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Api/TestLogController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AccountRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AppRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/CreateUserRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/LogInRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/TestLogRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/TestRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Account.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/AccountScope.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/AccountTenantObserver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/App.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/HasAccountScope.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Test.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/TestLog.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/TestUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repository/AccountRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repository/AppRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repository/TestLogRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repository/TestRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/TestService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Api/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Api/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisteredUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/EloquentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/EloquentRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/UserService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +212,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611438430919</updated>
       <workItem from="1611438431990" duration="310000" />
-      <workItem from="1611438767082" duration="2825000" />
+      <workItem from="1611438767082" duration="16635000" />
     </task>
     <servers />
   </component>
@@ -217,18 +232,25 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="392" y="310" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611441531395">
-      <screen x="0" y="23" width="1792" height="1055" />
+    <state x="392" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611522661703">
+      <screen x="0" y="0" width="1792" height="1078" />
     </state>
     <state x="392" y="310" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1792.1055@0.23.1792.1055" timestamp="1611441531395" />
     <state x="392" y="310" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1792.1056@0.23.1792.1056" timestamp="1611440682339" />
-    <state x="334" y="281" key="NewPhpClassDialog" timestamp="1611440765226">
-      <screen x="0" y="23" width="1792" height="1056" />
+    <state x="392" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1792.-199.3440.1417/0.0.1792.1078@0.0.1792.1078" timestamp="1611522661703" />
+    <state x="392" y="305" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1792.-199.3440.1417/0.0.1792.1120@0.0.1792.1120" timestamp="1611512688102" />
+    <state x="392" y="305" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1792.-222.3440.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1611522223704" />
+    <state x="334" y="274" key="NewPhpClassDialog" timestamp="1611521092625">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="334" y="281" key="NewPhpClassDialog/0.23.1792.1056@0.23.1792.1056" timestamp="1611440765226" />
-    <state x="473" y="479" key="NewPhpFileDialog" timestamp="1611440098350">
-      <screen x="0" y="23" width="1792" height="1056" />
+    <state x="334" y="264" key="NewPhpClassDialog/1792.-199.3440.1417/0.0.1792.1078@0.0.1792.1078" timestamp="1611513810484" />
+    <state x="334" y="274" key="NewPhpClassDialog/1792.-199.3440.1417/0.0.1792.1120@0.0.1792.1120" timestamp="1611514219163" />
+    <state x="334" y="274" key="NewPhpClassDialog/1792.-222.3440.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1611521092625" />
+    <state x="473" y="466" key="NewPhpFileDialog" timestamp="1611513737190">
+      <screen x="0" y="0" width="1792" height="1078" />
     </state>
     <state x="473" y="479" key="NewPhpFileDialog/0.23.1792.1056@0.23.1792.1056" timestamp="1611440098350" />
+    <state x="473" y="466" key="NewPhpFileDialog/1792.-199.3440.1417/0.0.1792.1078@0.0.1792.1078" timestamp="1611513737190" />
   </component>
 </project>

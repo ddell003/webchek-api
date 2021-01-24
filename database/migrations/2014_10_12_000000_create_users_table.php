@@ -27,6 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->boolean('owner')->default(0);
             $table->string('api_token', 80);
             $table->rememberToken();
             $table->timestamps();
@@ -50,6 +51,7 @@ class CreateUsersTable extends Migration
             $table->foreignId('app_id')->constrained('apps');
             $table->string('name');
             $table->string('url')->nullable();
+            $table->text('curl')->nullable();
             $table->string('expected_status_code')->default(200);
             $table->string('frequency')->default("minutes");
             $table->integer('frequency_amount')->default(15);

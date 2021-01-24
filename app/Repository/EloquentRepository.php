@@ -191,7 +191,10 @@ abstract class EloquentRepository extends Repository
      */
     public function create($data)
     {
-        return $this->getModel()->create($data);
+        $createdItem = $this->getModel()->create($data);
+        $item = $this->getById($createdItem->id);
+        $item->wasRecentlyCreated = true;
+        return $item;
     }
 
     public function update($id, $data)

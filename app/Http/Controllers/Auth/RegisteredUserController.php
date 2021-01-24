@@ -9,7 +9,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Psy\Util\Str;
+use Illuminate\Support\Str;
 
 class RegisteredUserController extends Controller
 {
@@ -44,6 +44,7 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'api_token' => Str::random(80),
+            'account_id' => $request->account_id,
         ]));
 
         event(new Registered($user));
