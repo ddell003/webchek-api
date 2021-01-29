@@ -20,6 +20,7 @@ This is stored on github https://github.com/ddell003/webchek-api
 4. set up the .env variables (includes setting up database credientials)
     - For testing locally just use sqlite ```touch /database/database.sqlite```
 5. Run Migrations to populate database ```php artisan migrate```
+6. setup local server by: ```php artisan serve``` copy the returned url to paste into the UI
 
 ### Architecture
 #### Api
@@ -32,7 +33,14 @@ Instead of having duplicate logic, it has been abstracted out to the PartyServic
 such as determining if a user is allowed to perform an action and other process such as deciding how to "RSVP" a user. To interact with the databases, 
 the service calls a repository which sits on top of the model which directly interacts with the database. The repository contains information 
 pertinent to the database. The repositories extend my base repository class which contains all the CRUD logic. Thus the individual libraries 
-are very simple but allow you to introduce specific complex logic as needed.  
+are very simple but allow you to introduce specific complex logic as needed. 
+
+### Authentication
+The API uses basic API tokens for authentication. Not the best security but it works for the class.
+To get a token, you need to login at the login endpoint shown in postman, then copy the api_token key returned in the response
+Then, when making API calls via  postman, select the Authorization tab and then select "Bearer Token" as authorization type and past your token into the form field
+
+ 
 
 ## Deployments
 
