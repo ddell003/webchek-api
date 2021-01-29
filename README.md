@@ -34,14 +34,7 @@ such as determining if a user is allowed to perform an action and other process 
 the service calls a repository which sits on top of the model which directly interacts with the database. The repository contains information 
 pertinent to the database. The repositories extend my base repository class which contains all the CRUD logic. Thus the individual libraries 
 are very simple but allow you to introduce specific complex logic as needed. 
-
-### Authentication
-The API uses basic API tokens for authentication. Not the best security but it works for the class.
-To get a token, you need to login at the login endpoint shown in postman, then copy the api_token key returned in the response
-Then, when making API calls via  postman, select the Authorization tab and then select "Bearer Token" as authorization type and past your token into the form field
-
  
-
 ## Deployments
 
 I am using Heroku as my server
@@ -83,6 +76,10 @@ $ php artisan user:create --first_name=Parker --last_name=Dell --email=parkerdel
 ``````
 
 ## Interacting With API
+### Authentication
+The API uses basic API tokens for authentication. Not the best security but it works for the class.
+To get a token, you need to login at the login endpoint shown in postman, then copy the api_token key returned in the response
+Then, when making API calls via  postman, select the Authorization tab and then select "Bearer Token" as authorization type and past your token into the form field
 1. Install postman
 2. Import postman collection stored in root of project
-3. hit the stored end points 
+3. hit the stored end points (see )
