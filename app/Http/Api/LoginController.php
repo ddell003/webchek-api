@@ -31,7 +31,15 @@ class LoginController extends Controller
         }
 
         $user = Auth::getUser();
-        return $user;
+        $formattedUser = [
+            "id"=>$user->id,
+            "name"=>$user->name,
+            "created_at"=>$user->created_at,
+            "updated_at"=>$user->updated_at,
+            "owner"=>$user->owner,
+            "api_token"=>$user->api_token,
+        ];
+        return $formattedUser;
 
     }
 }

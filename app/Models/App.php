@@ -24,6 +24,11 @@ class App extends Model
 
     protected $casts = [
         'id' => "integer",
-        'status' => 'integer',
+        //'status' => 'integer',
     ];
+
+    public function tests()
+    {
+        return $this->hasMany(Test::class);
+    }
 }

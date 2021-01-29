@@ -20,11 +20,13 @@ use Illuminate\Support\Facades\Route;
     return $request->user();
 });*/
 Route::post('login', '\\' . LoginController::class . '@login');
+
 Route::resource('/accounts', '\\' . \App\Http\Api\AccountController::class);
 Route::group(['middleware' => ['throttle:20,1', 'auth:api']], function () {
     Route::resource('/users', '\\' . UserController::class);
     Route::resource('/apps', '\\' . \App\Http\Api\AppController::class);
     Route::resource('/apps/{app}/tests', '\\' . \App\Http\Api\TestController::class);
+    Route::post('test/{test}/run', '\\' . \App\Http\Api\TestController::class.'@runTests');
     Route::resource('apps/{app}/tests/{test}/logs', '\\' . \App\Http\Api\TestLogController::class);
 
 });

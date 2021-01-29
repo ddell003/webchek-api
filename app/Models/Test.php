@@ -32,7 +32,9 @@ class Test extends Model
 
     protected $casts = [
         'id' => "integer",
-        'status' => 'boolean',
+        'app_id' => "integer",
+        //'active' => "integer",
+        //'status' => 'boolean',
     ];
 
     public function latest()

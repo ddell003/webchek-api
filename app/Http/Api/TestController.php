@@ -8,6 +8,7 @@ use App\Http\Requests\TestRequest;
 use App\Models\App;
 use App\Models\Test;
 use App\Services\TestService;
+use http\Env\Request;
 use Illuminate\Support\Facades\Response;
 
 class TestController
@@ -68,5 +69,10 @@ class TestController
     {
         $this->testService->deleteTest($test->id);
         return Response::json([], 204);
+    }
+
+    public function runTests(Test $test)
+    {
+        return $this->testService->runTest($test);
     }
 }

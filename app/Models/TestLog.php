@@ -32,8 +32,7 @@ class TestLog extends Model
 
     protected $casts = [
         'id' => "integer",
-        'status' => 'boolean',
-        'latest' => 'boolean',
+        'latest' => 'integer',
     ];
 
 }

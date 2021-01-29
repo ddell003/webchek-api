@@ -23,6 +23,13 @@ class TestService
             "users",
         ]
     ];
+    private $appOptions = [
+        'includes' => [
+            'tests',
+            'tests.latest',
+            "tests.users",
+        ]
+    ];
 
     public function __construct(AppRepository $appRepository, TestRepository $testRepository, TestLogRepository $testLogRepository)
     {
@@ -102,14 +109,34 @@ class TestService
         $this->testRepository->delete($test_id);
     }
 
+    public function runTest($test)
+    {
+        $user_id = Auth::user()->id;
+        $statuses = [
+            ["status"=>"running", "msg"=>"It is currently being ran check back later"],
+            ["status"=>"failed", "msg"=>"The Test Failed"],
+            ["status"=>"passed", "msg"=>"The Test Passed"],
+        ];
+        shuffle($statuses);
+
+        $data = [
+            "test_id"=>$test->id,
+            "status"=>$statuses[0]["status"], // 0 => running /1 failed /2 passed
+            "message"=>$statuses[0]["msg"],
+            "created_at"=> new Carbon(),
+            "updated_at"=> new Carbon(),
+        ];
+         return $this->testLogRepository->create($data);
+    }
+
     public function getApps($options = [])
     {
-        return $this->appRepository->get();
+        return $this->appRepository->get($this->appOptions);
     }
 
     public function getApp($app_id)
     {
-        return $this->appRepository->getById($app_id);
+        return $this->appRepository->getById($app_id, $this->appOptions);
     }
 
     public function createApp($data)
