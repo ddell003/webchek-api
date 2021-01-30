@@ -83,3 +83,10 @@ Then, when making API calls via  postman, select the Authorization tab and then 
 1. Install postman
 2. Import postman collection stored in root of project
 3. hit the stored end points (see )
+
+## Testing
+in terminal run ```php artisan test```
+
+Running specific tests ``` php artisan test --filter AppTest```
+
+Running Methods ````php artisan test --filter testBasicTest ````

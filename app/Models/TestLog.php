@@ -10,12 +10,13 @@ namespace App\Models;
             $table->boolean('latest')->default(1);
  */
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class TestLog extends Model
 {
-    use  SoftDeletes, HasAccountScope;
+    use  SoftDeletes, HasAccountScope, HasFactory;
 
     protected $table = 'test_logs';
 
