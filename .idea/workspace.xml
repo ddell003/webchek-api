@@ -20,22 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a153f4d-0af7-44e7-9659-3eaab29e5df3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/UpdateUserRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/AccountFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/AppTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/UserTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Api/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Api/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Account.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/App.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Test.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/TestLog.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/TestLog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/TestUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/TestUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/UserService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/RegistrationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/RegistrationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +182,7 @@
       <updated>1611438430919</updated>
       <workItem from="1611438431990" duration="310000" />
       <workItem from="1611438767082" duration="21521000" />
-      <workItem from="1611842328757" duration="11304000" />
+      <workItem from="1611842328757" duration="11764000" />
     </task>
     <servers />
   </component>
