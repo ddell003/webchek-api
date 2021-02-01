@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Route;
     return $request->user();
 });*/
 Route::post('login', '\\' . LoginController::class . '@login');
+Route::get('run_test', '\\' . LoginController::class . '@test');
+Route::post('test_url', '\\' . \App\Http\Api\TestController::class . '@testUrl');
 
 Route::resource('/accounts', '\\' . \App\Http\Api\AccountController::class);
 Route::group(['middleware' => ['throttle:20,1', 'auth:api']], function () {

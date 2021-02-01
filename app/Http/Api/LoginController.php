@@ -7,6 +7,7 @@ namespace App\Http\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LogInRequest;
 use App\Models\User;
+use App\Services\helpers\RunTest;
 use App\Services\UserService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -41,5 +42,11 @@ class LoginController extends Controller
         ];
         return $formattedUser;
 
+    }
+
+    public function test()
+    {
+        $runner = new RunTest();
+        $runner->run();
     }
 }

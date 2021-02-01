@@ -7,6 +7,7 @@ namespace App\Http\Api;
 use App\Http\Requests\TestRequest;
 use App\Models\App;
 use App\Models\Test;
+use App\Services\helpers\RunTest;
 use App\Services\TestService;
 use http\Env\Request;
 use Illuminate\Support\Facades\Response;
@@ -74,5 +75,11 @@ class TestController
     public function runTests(Test $test)
     {
         return $this->testService->runTest($test);
+    }
+
+    public function testUrl() {
+        $input = request()->input();
+        $tester = new RunTest();
+        return $tester->getHttpCall($input['url']);
     }
 }

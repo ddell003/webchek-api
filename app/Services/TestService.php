@@ -141,7 +141,10 @@ class TestService
 
     public function createApp($data)
     {
-        return $this->appRepository->create($this->addAuditFields($data));
+        $app = $this->appRepository->create($this->addAuditFields($data));
+        $info = $this->getApp($app->id);
+        $info->wasRecentlyCreated;
+        return $info;
 
     }
 
