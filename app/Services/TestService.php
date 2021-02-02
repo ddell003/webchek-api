@@ -70,7 +70,14 @@ class TestService
 
     public function getTest($test_id)
     {
-        return $this->testRepository->getById($test_id, $this->testOptions);
+        $testOptions = [
+            'includes' => [
+                'latest',
+                "users",
+                "logs",
+            ]
+    ];
+        return $this->testRepository->getById($test_id, $testOptions);
     }
 
     public function createTest($data)

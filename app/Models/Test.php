@@ -47,4 +47,9 @@ class Test extends Model
     {
        return $this->belongsToMany(User::class, "test_users", "test_id", "user_id");
     }
+
+    public function logs()
+    {
+        return $this->hasMany(TestLog::class, 'test_id', 'id')->orderBy("created_at", "desc");
+    }
 }
