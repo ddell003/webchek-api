@@ -63,6 +63,7 @@ class UserService
     public function createAccount($data)
     {
         $account = $this->accountRepository->create(["name"=>$data['name']]);
+
         $userData = [
             "account_id"=>$account->id,
             "name"=>$data['fullname'],
