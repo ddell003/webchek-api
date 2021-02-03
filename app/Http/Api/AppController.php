@@ -69,4 +69,9 @@ class AppController extends Controller
         $this->testService->deleteApp($app->id);
         return Response::json([], 204);
     }
+
+    public function runTests(App $app)
+    {
+        return $this->testService->runAppTests($app);
+    }
 }

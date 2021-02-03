@@ -4,12 +4,41 @@
 namespace App\Services\helpers;
 
 
+
+use App\Models\Test;
 use Illuminate\Support\Facades\Http;
 
 class RunTest
 {
     public function __construct(){
 
+    }
+
+    public function run(Test $test){
+        if($test->url){
+            $process = $this->getHttpCall($test->url);
+        }else{
+            //run curl call
+            return ["status"=>"passed", "message"=>"Not Set up to run curl calls!"];
+        }
+        $data = [
+            "status"=>"running",
+            "message"=>"The Test is running"
+        ];
+        if($process['status'] == $test->expected_status_code){
+            $data = [
+                "status"=>"passed",
+                "message"=>$process['message']." - ".$process["status"],
+            ];
+        }
+        else{
+            $data = [
+                "status"=>"failed",
+                "message"=>$process['message']." - ".$process["status"],
+            ];
+        }
+
+        return $data;
     }
 
     public function getHttpCall($url)
@@ -23,7 +52,7 @@ class RunTest
 
         if($response->successful()){
             $body = ($response->json()) ? $response->json() : "Success";
-            return ["status"=>$status, "message"=>$body];
+            return ["status"=>$status, "message"=>$body,];
         }
 
         $body = $response->body();
@@ -31,7 +60,7 @@ class RunTest
         return ["status"=>$status, "message"=>$body];
     }
 
-    public function run()
+    public function runCurl()
     {
         //$call = $this->getHttpCall();
         $raw = `curl --location --request GET 'https://webchek-api.herokuapp.com/api/users' \

@@ -7,6 +7,7 @@ namespace App\Services;
 use App\Repository\AppRepository;
 use App\Repository\TestLogRepository;
 use App\Repository\TestRepository;
+use App\Services\helpers\RunTest;
 use Carbon\Carbon;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
@@ -116,20 +117,26 @@ class TestService
         $this->testRepository->delete($test_id);
     }
 
+    public function runAppTests($app)
+    {
+        $app = $this->getApp($app->id);
+
+        foreach ($app->tests as $test){
+            $this->runTest($test);
+        }
+
+       return $this->getApp($app->id);
+    }
+
     public function runTest($test)
     {
-        $user_id = Auth::user()->id;
-        $statuses = [
-            ["status"=>"running", "msg"=>"It is currently being ran check back later"],
-            ["status"=>"failed", "msg"=>"The Test Failed"],
-            ["status"=>"passed", "msg"=>"The Test Passed"],
-        ];
-        shuffle($statuses);
+        $tester = new RunTest();
+        $results = $tester->run($test);
 
         $data = [
             "test_id"=>$test->id,
-            "status"=>$statuses[0]["status"], // 0 => running /1 failed /2 passed
-            "message"=>$statuses[0]["msg"],
+            "status"=>$results["status"], // 0 => running /1 failed /2 passed
+            "message"=>$results["message"],
             "created_at"=> new Carbon(),
             "updated_at"=> new Carbon(),
         ];

@@ -29,6 +29,7 @@ Route::group(['middleware' => ['throttle:20,1', 'auth:api']], function () {
     Route::resource('/apps', '\\' . \App\Http\Api\AppController::class);
     Route::resource('/apps/{app}/tests', '\\' . \App\Http\Api\TestController::class);
     Route::post('test/{test}/run', '\\' . \App\Http\Api\TestController::class.'@runTests');
+    Route::post('apps/{app}/run', '\\' . \App\Http\Api\AppController::class.'@runTests');
     Route::resource('apps/{app}/tests/{test}/logs', '\\' . \App\Http\Api\TestLogController::class);
 
 });
