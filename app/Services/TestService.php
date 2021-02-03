@@ -135,6 +135,7 @@ class TestService
     public function runTest($test)
     {
         $tester = new RunTest();
+        $test = $this->getTest($test->id);
         $results = $tester->run($test);
 
         $data = [

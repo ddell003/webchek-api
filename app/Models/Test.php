@@ -45,7 +45,7 @@ class Test extends Model
 
     public function site()
     {
-        return $this->belongsTo(App::class);
+        return $this->belongsTo(App::class, "app_id", "id");
     }
 
     public function users()

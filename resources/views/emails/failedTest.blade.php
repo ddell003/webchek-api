@@ -1,8 +1,8 @@
 @component('mail::message')
-# Test Failed
+# {{$test->site->name}} - Test Failed!
 ##
 
-The body of your message. - {{$test->name}}
+The test {{$test->name}} failed
 
 @component('mail::button', ['url' => config('app.client_url')])
 View Logs
