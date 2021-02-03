@@ -1,5 +1,6 @@
 <?php
 
+use App\Mail\TestFailed;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/mailable', function () {
+    $test = \App\Models\Test::find(2);
+    //$site = \App\Models\App::find($test->app_id);
+    $log = \App\Models\TestLog::find(16);
+
+    return new TestFailed($test, $log);
 });
 
 Route::get('/dashboard', function () {

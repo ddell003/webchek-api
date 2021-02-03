@@ -46,7 +46,7 @@ class UserTest extends TestCase
 
 
         $user2 = User::factory()->make(["account_id"=>$authUser->account_id])->toArray();
-        $user2['email'] = "user2@gmail.com";
+        $user2['emails'] = "user2@gmail.com";
         $user2['password'] = "password";
         $user2['name'] = "user 2";
         $response = $this->json('POST', '/api/users', $user2, $this->headers);
@@ -61,7 +61,7 @@ class UserTest extends TestCase
 
         $user2 = User::factory()->make(["account_id"=>$authUser->account_id])->toArray();
         $usedUser =  $authUser->toArray();
-        $user2['email'] =$usedUser['email'];
+        $user2['emails'] =$usedUser['emails'];
         $user2['password'] = "password";
         $user2['name'] = "user 2";
 

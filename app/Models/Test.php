@@ -43,6 +43,11 @@ class Test extends Model
         return $this->hasOne(TestLog::class, 'test_id', 'id')->where("latest", "=", 1);
     }
 
+    public function site()
+    {
+        return $this->belongsTo(App::class);
+    }
+
     public function users()
     {
        return $this->belongsToMany(User::class, "test_users", "test_id", "user_id");

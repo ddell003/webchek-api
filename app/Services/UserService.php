@@ -34,7 +34,7 @@ class UserService
         $userData = [
             "account_id"=>Auth::user()->account_id,
             "name"=>$data['name'],
-            "email"=>$data['email'],
+            "emails"=>$data['emails'],
             "owner"=>0,
             'password' => Hash::make($data['password']),
             'api_token' => Str::random(80),
@@ -49,7 +49,7 @@ class UserService
     {
         $userData = [
             "name"=>$data['name'],
-            "email"=>$data['email'],
+            "emails"=>$data['emails'],
             "owner"=>0,
         ];
         if($password = Arr::get($data, 'password')){
@@ -66,7 +66,7 @@ class UserService
         $userData = [
             "account_id"=>$account->id,
             "name"=>$data['fullname'],
-            "email"=>$data['email'],
+            "emails"=>$data['emails'],
             "owner"=>1,
             'password' => Hash::make($data['password']),
             'api_token' => Str::random(80),

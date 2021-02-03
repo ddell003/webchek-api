@@ -4,6 +4,7 @@
 namespace App\Services;
 
 
+use App\Mail\TestFailed;
 use App\Repository\AppRepository;
 use App\Repository\TestLogRepository;
 use App\Repository\TestRepository;
@@ -11,6 +12,7 @@ use App\Services\helpers\RunTest;
 use Carbon\Carbon;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class TestService
 {
@@ -76,6 +78,7 @@ class TestService
                 'latest',
                 "users",
                 "logs",
+                "site"
             ]
     ];
         return $this->testRepository->getById($test_id, $testOptions);
@@ -123,6 +126,7 @@ class TestService
 
         foreach ($app->tests as $test){
             $this->runTest($test);
+            break;
         }
 
        return $this->getApp($app->id);
@@ -140,7 +144,10 @@ class TestService
             "created_at"=> new Carbon(),
             "updated_at"=> new Carbon(),
         ];
-         return $this->testLogRepository->create($data);
+
+        $log =  $this->testLogRepository->create($data);
+        Mail::to("parkerdell94@gmail.com")->send(new TestFailed($test, $log));
+         return $log;
     }
 
     public function getApps($options = [])

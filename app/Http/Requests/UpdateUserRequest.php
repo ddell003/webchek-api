@@ -30,7 +30,7 @@ class UpdateUserRequest extends FormRequest
 
         $rules = [
             'name'=>'required',
-            'email'=> Rule::unique('users')->ignore($user->id),
+            'emails'=> Rule::unique('users')->ignore($user->id),
         ];
 
         return $rules;
