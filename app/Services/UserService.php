@@ -66,7 +66,7 @@ class UserService
         $userData = [
             "account_id"=>$account->id,
             "name"=>$data['fullname'],
-            "emails"=>$data['email'],
+            "email"=>$data['email'],
             "owner"=>1,
             'password' => Hash::make($data['password']),
             'api_token' => Str::random(80),
