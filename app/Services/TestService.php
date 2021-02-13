@@ -165,7 +165,7 @@ class TestService
     {
         $app = $this->appRepository->create($this->addAuditFields($data));
         $info = $this->getApp($app->id);
-        $info->wasRecentlyCreated;
+        $info->wasRecentlyCreated = true;
         return $info;
 
     }
