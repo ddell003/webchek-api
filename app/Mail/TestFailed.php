@@ -34,7 +34,7 @@ class TestFailed extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.failedTest', [
+        return $this->markdown('email.failedTest', [
             'test'=>"some message"
         ]);
     }

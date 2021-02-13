@@ -29,7 +29,7 @@ class AccountRequest extends FormRequest
             'name'=>'required',
             'fullname'=>'required',
             'password'=>'required',
-            'emails'=>'unique:users,emails',
+            'email'=>'unique:users,email',
         ];
 
         return $rules;
