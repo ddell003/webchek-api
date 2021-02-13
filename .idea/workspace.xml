@@ -20,10 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a153f4d-0af7-44e7-9659-3eaab29e5df3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/factories/AppFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/TestService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/TestService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/AppTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/AppTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/SiteTestsTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +183,7 @@
       <workItem from="1611842328757" duration="24483000" />
       <workItem from="1612383404986" duration="516000" />
       <workItem from="1612549093616" duration="2226000" />
-      <workItem from="1613234839972" duration="1358000" />
+      <workItem from="1613234839972" duration="1472000" />
     </task>
     <servers />
   </component>
@@ -210,22 +207,22 @@
       <screen x="0" y="23" width="1792" height="1058" />
     </state>
     <state x="653" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1792.1058@0.23.1792.1058" timestamp="1613235706575" />
-    <state x="392" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613235527801">
+    <state x="392" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613236303604">
       <screen x="0" y="23" width="1792" height="1058" />
     </state>
     <state x="392" y="310" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1792.1055@0.23.1792.1055" timestamp="1611441531395" />
     <state x="392" y="310" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1792.1056@0.23.1792.1056" timestamp="1612037923453" />
-    <state x="392" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1792.1058@0.23.1792.1058" timestamp="1613235527801" />
+    <state x="392" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1792.1058@0.23.1792.1058" timestamp="1613236303604" />
     <state x="392" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1792.-199.3440.1417/0.0.1792.1078@0.0.1792.1078" timestamp="1611522661703" />
     <state x="392" y="305" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1792.-199.3440.1417/0.0.1792.1120@0.0.1792.1120" timestamp="1611512688102" />
     <state x="392" y="310" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1792.-199.3440.1417/0.23.1792.1055@0.23.1792.1055" timestamp="1612364227088" />
     <state x="392" y="311" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1792.-199.3440.1417/0.23.1792.1056@0.23.1792.1056" timestamp="1611969650646" />
     <state x="392" y="305" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1792.-222.3440.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1611966670052" />
-    <state x="334" y="281" key="NewPhpClassDialog" timestamp="1613235483274">
+    <state x="334" y="281" key="NewPhpClassDialog" timestamp="1613236277552">
       <screen x="0" y="23" width="1792" height="1058" />
     </state>
     <state x="334" y="281" key="NewPhpClassDialog/0.23.1792.1056@0.23.1792.1056" timestamp="1612038872354" />
-    <state x="334" y="281" key="NewPhpClassDialog/0.23.1792.1058@0.23.1792.1058" timestamp="1613235483274" />
+    <state x="334" y="281" key="NewPhpClassDialog/0.23.1792.1058@0.23.1792.1058" timestamp="1613236277552" />
     <state x="334" y="264" key="NewPhpClassDialog/1792.-199.3440.1417/0.0.1792.1078@0.0.1792.1078" timestamp="1611513810484" />
     <state x="334" y="274" key="NewPhpClassDialog/1792.-199.3440.1417/0.0.1792.1120@0.0.1792.1120" timestamp="1611514219163" />
     <state x="334" y="274" key="NewPhpClassDialog/1792.-222.3440.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1611965718072" />
