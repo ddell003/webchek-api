@@ -35,7 +35,7 @@ class UserService
             "account_id"=>Auth::user()->account_id,
             "name"=>$data['name'],
             "email"=>$data['email'],
-            "owner"=>0,
+            "owner"=>Arr::get($data, "owner", 0),
             'password' => Hash::make($data['password']),
             'api_token' => Str::random(80),
 
@@ -47,10 +47,11 @@ class UserService
 
     public function update($id, $data)
     {
+        $user = $this->getById($id);
         $userData = [
             "name"=>$data['name'],
             "email"=>$data['email'],
-            "owner"=>0,
+            "owner"=>Arr::get($data, "owner", $user->owner),
         ];
         if($password = Arr::get($data, 'password')){
             $userData['password'] =  Hash::make($data['password']);
