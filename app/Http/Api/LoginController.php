@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\LogInRequest;
 use App\Models\User;
 use App\Services\helpers\RunTest;
+use App\Services\TestService;
 use App\Services\UserService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,10 +18,12 @@ use Illuminate\Support\Facades\Response;
 class LoginController extends Controller
 {
     private $userService;
+    private $testService;
 
-    public function __construct(UserService $userService)
+    public function __construct(UserService $userService, TestService $testService)
     {
-        return $this->userService = $userService;
+         $this->userService = $userService;
+         $this->testService = $testService;
     }
 
     public function login(LogInRequest $request){
@@ -40,13 +43,9 @@ class LoginController extends Controller
             "owner"=>$user->owner,
             "api_token"=>$user->api_token,
         ];
+        //lets run the account tests each time a user logs in
+        $this->testService->runAccountTests();
         return $formattedUser;
 
-    }
-
-    public function test()
-    {
-        $runner = new RunTest();
-        $runner->run();
     }
 }

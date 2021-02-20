@@ -5,6 +5,8 @@ namespace App\Services;
 
 
 use App\Mail\TestFailed;
+use App\Models\App;
+use App\Models\User;
 use App\Repository\AppRepository;
 use App\Repository\TestLogRepository;
 use App\Repository\TestRepository;
@@ -12,6 +14,7 @@ use App\Services\helpers\RunTest;
 use Carbon\Carbon;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 
 class TestService
@@ -119,14 +122,39 @@ class TestService
     {
         $this->testRepository->delete($test_id);
     }
-
-    public function runAppTests($app)
+    public function runAccountTests()
+    {
+        $sites = App::where("status", '=', 1)->has("tests")->with("tests")->get();
+        $errors = [];
+        foreach ($sites as $site){
+            $error = $this->runAppTests($site,true);
+            array_push($errors, $error);
+        }
+        return ["status"=>true, "errors"=>$errors];
+    }
+    /*
+     * run all tests for a site
+     */
+    public function runAppTests($app, $returnErrors = false)
     {
         $app = $this->getApp($app->id);
+        $errors = [];
 
         foreach ($app->tests as $test){
-            $this->runTest($test);
-            break;
+            try{
+                $this->runTest($test);
+            }catch(\Exception $e){
+                $error = [
+                  "test"=>$test->id,
+                  'error'=>$e->getMessage()
+                ];
+                array_push($errors, $error);
+            }
+
+        }
+
+        if($returnErrors){
+            return $errors;
         }
 
        return $this->getApp($app->id);
@@ -147,7 +175,16 @@ class TestService
         ];
 
         $log =  $this->testLogRepository->create($data);
-        Mail::to("parkerdell94@gmail.com")->send(new TestFailed($test, $log));
+        if($test->users->count() > 0){
+            $users = $test->users;
+        }
+        else{
+            //send email to account owner
+            $users =User::where("owner", '=', 1)->get();
+        }
+
+
+        Mail::to($users)->send(new TestFailed($test, $log));
          return $log;
     }
 

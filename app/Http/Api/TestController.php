@@ -10,6 +10,7 @@ use App\Models\Test;
 use App\Services\helpers\RunTest;
 use App\Services\TestService;
 use http\Env\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
 
 class TestController
@@ -81,5 +82,10 @@ class TestController
         $input = request()->input();
         $tester = new RunTest();
         return $tester->getHttpCall($input['url']);
+    }
+
+    public function testAccount()
+    {
+        return $this->testService->runAccountTests();
     }
 }
