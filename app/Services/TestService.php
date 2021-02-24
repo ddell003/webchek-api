@@ -175,6 +175,10 @@ class TestService
         ];
 
         $log =  $this->testLogRepository->create($data);
+        //if tests pass, we can exit
+        if($results["status"] != "failed"){
+            return $log;
+        }
         if($test->users->count() > 0){
             $users = $test->users;
         }
