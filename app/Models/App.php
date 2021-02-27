@@ -25,7 +25,7 @@ class App extends Model
 
     protected $casts = [
         'id' => "integer",
-        //'status' => 'integer',
+        'status' => 'string',
     ];
 
     public function tests()
